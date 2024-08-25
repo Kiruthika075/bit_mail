@@ -1,0 +1,89 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 300px; /* Same as sidebar width */
+  width: calc(100% - 307px); /* Full width minus sidebar width */
+  height: 80px; /* Adjust height as needed */
+  background-color: #f8f6f6;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative; /* Positioning the icon inside the input */
+}
+
+.search input {
+  width: 50%; /* Adjust width as needed */
+  padding: 8px 12px 8px 40px; /* Padding to make space for the icon */
+  border: 1px solid #ccc; /* Light border color */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px; /* Font size for better readability */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+  background-color: #f1f1f1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px; /* Position icon inside the input */
+  color: #888; /* Set icon color */
+  font-size: 24px; /* Adjust size as needed */
+  pointer-events: none; /* Ensure the icon doesn't block input interactions */
+}
+
+.topbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative; /* Allow positioning of child elements */
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-pic {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the profile picture round */
+  border: 2px solid #ccc; /* Optional border for better visual */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-right: 30px;
+}
+
+.logout-container {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50px; /* Adjust to position below the profile picture */
+  right: 0; /* Aligns with the profile picture */
+  margin-right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.profile-container:hover .logout-container {
+  display: block; /* Show logout button on profile picture hover */
+}
+
+.logout-button {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #f1f1f1;
+}

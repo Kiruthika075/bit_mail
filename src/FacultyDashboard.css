@@ -1,0 +1,15 @@
+.faculty-dashboard {
+  background-color: green;
+  height: 100vh; /* Adjust according to Topbar height */
+  padding: 20px;
+}
+
+.faculty-dashboard h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.faculty-dashboard p {
+  font-size: 18px;
+  color: #666;
+}

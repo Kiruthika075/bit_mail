@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/* Import Material Icons */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.faculty-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px; /* Sidebar width */
+  height: 100vh; /* Full height */
+  background-color: #f8f6f6;
+  border-right: 1px solid var(--color-grey-800);
+  color: #333333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-logo {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #333333;
+}
+
+.navbar-logo a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 24px; /* Larger font size for logo */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navbar-links li {
+  margin: 20px 0; /* Increased margin for better spacing */
+  position: relative; /* Ensure hover effect is within bounds */
+}
+
+.navbar-links a {
+  color: rgb(67, 53, 53);
+  text-decoration: none;
+  font-size: 18px; /* Larger font size */
+  padding: 13px; /* Increased padding for better click area */
+  border-radius: 4px;
+  display: flex; /* Use flexbox for icon and text alignment */
+  align-items: center; /* Center-align the icon and text */
+  width: 100%; /* Take full width of the parent element */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative; /* Ensure hover effect is within bounds */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.navbar-links a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  z-index: -1; /* Behind text */
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.navbar-links a:hover::before {
+  margin-left: -20px;
+  width: 300px; /* Expand to full width */
+}
+
+.navbar-links a:hover {
+  color: black; /* Text color changes on hover */
+}
+
+.navbar-links .material-icons {
+  margin-right: 15px; /* Space between icon and text */
+  font-size: 24px; /* Adjust icon size */
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.navbar-links a:hover .material-icons {
+  color: #282c34; /* Blue color for icon on hover */
+}
+
+/* Optional: Center align the user info */
+.navbar-user {
+  margin-top: auto;
+  text-align: center;
+}
+
+.navbar-user span {
+  font-size: 16px; /* Slightly larger font size for user info */
+}
